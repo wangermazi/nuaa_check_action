@@ -146,7 +146,7 @@ def check(cookies, geo_api_info, id, uid):
         'remark': '',
         'address': geo_api_info['formattedAddress'],
         'geo_api_info': json.dumps(geo_api_info, separators=(',', ':')),
-        'area': geo_api_info['addressComponent']['province'] + ' ' + geo_api_info['addressComponent']['city']
+        'area': geo_api_info['addressComponent']['province'] + ' ' + str(geo_api_info['addressComponent']['city'])
                  + ' ' + geo_api_info['addressComponent']['district'],
         'province': geo_api_info['addressComponent']['province'],
         'city': geo_api_info['addressComponent']['city'],
